@@ -1,5 +1,8 @@
 # Zed Architecture Documentation
 
+<img width="1200" height="630" alt="image" src="https://github.com/user-attachments/assets/b8806c2e-0458-4f4f-9033-98602754ba98" />
+
+
 A comprehensive guide to the Zed code editor's architecture, organized as a series of **architectural atoms** — self-contained documents that each explain one fundamental layer of the system.
 
 ---
@@ -26,10 +29,10 @@ The atoms are ordered from the lowest-level foundation to the highest-level feat
 ## Architecture Overview
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────────┐
 │                        Zed Application                           │
 │                                                                  │
-│  ┌──────────────────────────────────────────────────────────┐   │
+│  ┌───────────────────────────────────────────────────────────┐   │
 │  │  Agent (AI)        │  Extensions (WASM)                   │   │
 │  │  Model providers   │  Languages, themes, LSP adapters     │   │
 │  └────────┬───────────┴──────────┬───────────────────────────┘   │
@@ -41,13 +44,13 @@ The atoms are ordered from the lowest-level foundation to the highest-level feat
 │  │  └─ WorkspaceDb (persistence)                             │   │
 │  └────────┬──────────────────────────────────────────────────┘   │
 │           │                                                      │
-│  ┌────────▼──────────┐  ┌───────────────────┐  ┌────────────┐   │
-│  │  Editor            │  │  Terminal          │  │  Settings   │   │
-│  │  ├─ MultiBuffer    │  │  ├─ Alacritty      │  │  ├─ Store   │   │
-│  │  ├─ DisplayMap     │  │  ├─ PTY            │  │  ├─ Keymap  │   │
-│  │  ├─ Selections     │  │  └─ Tasks          │  │  └─ Scoped  │   │
-│  │  └─ Anchors        │  │                    │  │            │   │
-│  └────────┬───────────┘  └────────────────────┘  └────────────┘   │
+│  ┌────────▼──────────┐  ┌───────────────────┐  ┌────────────┐    │
+│  │  Editor           │  │  Terminal         │  │  Settings  │    │
+│  │  ├─ MultiBuffer   │  │  ├─ Alacritty     │  │  ├─ Store  │    │
+│  │  ├─ DisplayMap    │  │  ├─ PTY           │  │  ├─ Keymap │    │
+│  │  ├─ Selections    │  │  └─ Tasks         │  │  └─ Scoped │    │
+│  │  └─ Anchors       │  │                   │  │            │    │
+│  └────────┬──────────┘  └───────────────── ─┘  └────────────┘    │
 │           │                                                      │
 │  ┌────────▼──────────────────────────────────────────────────┐   │
 │  │  Project                                                  │   │
@@ -61,7 +64,7 @@ The atoms are ordered from the lowest-level foundation to the highest-level feat
 │           │                                                      │
 │  ┌────────▼──────────────────────────────────────────────────┐   │
 │  │  Text / Language / CRDT                                   │   │
-│  │  ├─ Rope (SumTree<Chunk>) — text storage                 │   │
+│  │  ├─ Rope (SumTree<Chunk>) — text storage                  │   │
 │  │  ├─ Fragments (CRDT edit history)                         │   │
 │  │  ├─ Lamport clocks + version vectors                      │   │
 │  │  └─ Tree-sitter syntax maps                               │   │
@@ -83,7 +86,7 @@ The atoms are ordered from the lowest-level foundation to the highest-level feat
 │  │  ├─ Collab server (relay, not resolver)                   │   │
 │  │  └─ Dual-mode: Local / Remote for every store             │   │
 │  └───────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────┘
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 ---
