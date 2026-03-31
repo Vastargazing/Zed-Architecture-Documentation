@@ -6,33 +6,6 @@ The fourth architectural atom — how text is stored, transformed, and rendered 
 
 ## 1) Core Architecture Overview
 
-```
-             ┌─────────────────────────────┐
-             │   Editor (Entity<Editor>)     │
-             │   UI controller + bindings    │
-             └──────────────┬───────────────┘
-                            │
-             ┌──────────────▼───────────────┐
-             │  MultiBuffer (Entity)         │
-             │  Excerpt aggregator           │
-             └──────────────┬───────────────┘
-                            │
-             ┌──────────────▼───────────────┐
-             │  Buffer (language crate)      │
-             │  Syntax + LSP + diagnostics   │
-             └──────────────┬───────────────┘
-                            │
-             ┌──────────────▼───────────────┐
-             │  TextBuffer (text crate)      │
-             │  CRDT + Rope + history        │
-             └──────────────┬───────────────┘
-                            │
-             ┌──────────────▼───────────────┐
-             │  Rope (SumTree<Chunk>)        │
-             │  Raw text storage             │
-             └──────────────────────────────┘
-```
-
 <img width="1440" height="890" alt="image" src="https://github.com/user-attachments/assets/4867a0a7-7c0a-4c4f-83c4-e9bba28f340f" />
 
 
