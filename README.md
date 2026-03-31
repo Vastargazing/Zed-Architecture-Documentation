@@ -1,4 +1,4 @@
-![zed_architecture_overview](https://github.com/user-attachments/assets/60ac6d93-14c1-41d0-b94c-98fd05dd6ca7)# Zed Architecture Documentation
+# Zed Architecture Documentation
 
 <img width="1200" height="630" alt="image" src="https://github.com/user-attachments/assets/b8806c2e-0458-4f4f-9033-98602754ba98" />
 
@@ -26,6 +26,8 @@ The atoms are ordered from the lowest-level foundation to the highest-level feat
 ---
 
 ## Architecture Overview
+
+![zed_architecture_overview](https://github.com/user-attachments/assets/60ac6d93-14c1-41d0-b94c-98fd05dd6ca7)
 
 ![<svg width="100%" viewBox="0 0 680 620" xmlns="http://www.w3.org/2000/svg">
 <defs>
