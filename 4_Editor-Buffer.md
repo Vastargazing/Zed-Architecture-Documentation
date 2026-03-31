@@ -33,6 +33,9 @@ The fourth architectural atom — how text is stored, transformed, and rendered 
              └──────────────────────────────┘
 ```
 
+<img width="1440" height="890" alt="image" src="https://github.com/user-attachments/assets/4867a0a7-7c0a-4c4f-83c4-e9bba28f340f" />
+
+
 Each layer adds capabilities on top of the previous one.
 
 ---
