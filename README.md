@@ -27,7 +27,8 @@ The atoms are ordered from the lowest-level foundation to the highest-level feat
 
 ## Architecture Overview
 
-![zed_architecture_overview](https://github.com/user-attachments/assets/60ac6d93-14c1-41d0-b94c-98fd05dd6ca7)
+<img width="1386" height="1304" alt="image" src="https://github.com/user-attachments/assets/cf1147e8-0bff-4042-8616-d315d60aa3e9" />
+
 
 
 
